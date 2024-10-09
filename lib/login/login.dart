@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/RouteGenerator.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -99,7 +100,7 @@ class _LoginPageState extends State<LoginPage> {
                     width: double.infinity,
                     child: ElevatedButton(
                       onPressed: () {
-                        // TODO: Implement login logic
+                        Navigator.pushNamed(context, RoutesName.splash);
                       },
                       style: ElevatedButton.styleFrom(
                         backgroundColor: const Color(0xFF0024DE), // Green color

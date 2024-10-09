@@ -1,21 +1,23 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/RouteGenerator.dart';
 import 'package:flutter_application_1/login/login.dart';
 
 void main() {
-  runApp(const MyApp());
+  // runApp(const MyApp());
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Simple Login Page',
+      debugShowCheckedModeBanner: false, // bỏ chữ debug trên đầu app
+      title: 'App Food',
       theme: ThemeData(
         useMaterial3: true,
       ),
-      home: const LoginPage(),
+      initialRoute: RoutesName.login, // màn mặc định đầu tiên của ứng dụng
+      onGenerateRoute: onGenerateRoute, //gửi tất cả các router (navigation)
     );
   }
 }
