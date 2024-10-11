@@ -1,15 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/RouteGenerator.dart';
 
-class HomePage extends StatelessWidget {
-  const HomePage({super.key});
+class AuthenticationPage extends StatelessWidget {
+  const AuthenticationPage({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // appBar: AppBar(
-      //   title: const Text('Home Page'),
-      // ),
       body: SafeArea(
         child: SizedBox(
           width: MediaQuery.of(context).size.width,
@@ -29,7 +25,7 @@ class HomePage extends StatelessWidget {
                     borderRadius: BorderRadius.circular(
                         16), // Bo góc cho hình ảnh khớp với container
                     child: Image.asset(
-                      'assets/food1.png',
+                      'assets/food2.png',
                       width: 301,
                       height: 260,
                       fit: BoxFit
@@ -72,10 +68,7 @@ class HomePage extends StatelessWidget {
                       ),
                       const SizedBox(height: 20),
                       ElevatedButton(
-                        onPressed: () {
-                          Navigator.pushNamed(
-                              context, RoutesName.authentication);
-                        },
+                        onPressed: () {},
                         style: ElevatedButton.styleFrom(
                           padding: const EdgeInsets.symmetric(
                               horizontal: 100, vertical: 15),
